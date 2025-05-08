@@ -22,8 +22,8 @@ jobs:
           fetch-depth: 0 # Fetch all history for git info
       - name: Update Quartz
         run: |
-          cp manual-update.sh ../
+          cp update-cicd.sh ../
           cd ..
-          chmod +x manual-update.sh
-          ./manual-update.sh
+          chmod +x update-cicd.sh
+          ./update-cicd.sh
           
