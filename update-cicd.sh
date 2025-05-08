@@ -340,6 +340,7 @@ declare -a themes=(
 mkdir temp
 cd temp
 
+git config --unset-all http.https://github.com/.extraheader
 git config pull.rebase >&- || git config pull.rebase true
 git config --global user.email "github-actions[bot]@users.noreply.github.com"
 git config --global user.name "github-actions[bot]"
