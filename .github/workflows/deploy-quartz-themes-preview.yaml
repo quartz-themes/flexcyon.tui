@@ -21,6 +21,7 @@ jobs:
   build:
     if: ${{ github.repository != 'quartz-themes/quartz-themes-preview-template' }}
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,7 +41,7 @@ jobs:
         uses: nick-fields/retry@v3
         with:
           command: npm ci
-          timeout_minutes: 10
+          timeout_minutes: 3
           max_attempts: 3
           on_retry_command: |
             git config pull.rebase >&- || git config pull.rebase true
@@ -55,13 +56,13 @@ jobs:
         uses: nick-fields/retry@v3
         with:
           command: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- ${{ github.event.repository.name }}
-          timeout_minutes: 10
+          timeout_minutes: 2
           max_attempts: 3
       - name: Build Quartz Docs
         uses: nick-fields/retry@v3
         with:
           command: npx quartz build -d docs
-          timeout_minutes: 10
+          timeout_minutes: 5
           max_attempts: 3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -70,6 +71,7 @@ jobs:
 
   deploy:
     needs: build
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
