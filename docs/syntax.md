@@ -1,6 +1,8 @@
 ---
-title: syntax
+title: Syntax
 ---
+
+> This note is to quickly check how all features are rendered.
 
 # Markdown Formatting Guide for Obsidian
 
