@@ -232,8 +232,8 @@ If you only specify the width, the image scales according to its original aspect
 
 ![Engelbart|75](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)
 
->[!tip]
- If you want to add an image from inside your vault, you can also [embed an image in a note](https://help.obsidian.md/Linking+notes+and+files/Embedding+files#Embed%20an%20image%20in%20a%20note).
+> [!tip]
+> If you want to add an image from inside your vault, you can also [embed an image in a note](https://help.obsidian.md/Linking+notes+and+files/Embedding+files#Embed%20an%20image%20in%20a%20note).
 
 ## Lists
 
