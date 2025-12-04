@@ -17,6 +17,5 @@ This plugin accepts the following configuration options:
 ## API
 
 - Category: Transformer
-- Function name: `ExternalPlugin.Latex()`.
-- Source: [`quartz-community/latex`](https://github.com/quartz-community/latex)
-- Install: `npx quartz plugin add github:quartz-community/latex`
+- Function name: `Plugin.Latex()`.
+- Source: [`quartz/plugins/transformers/latex.ts`](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/transformers/latex.ts).

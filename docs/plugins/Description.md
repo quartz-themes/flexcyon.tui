@@ -19,6 +19,5 @@ This plugin accepts the following configuration options:
 ## API
 
 - Category: Transformer
-- Function name: `ExternalPlugin.Description()`.
-- Source: [`quartz-community/description`](https://github.com/quartz-community/description)
-- Install: `npx quartz plugin add github:quartz-community/description`
+- Function name: `Plugin.Description()`.
+- Source: [`quartz/plugins/transformers/description.ts`](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/transformers/description.ts).

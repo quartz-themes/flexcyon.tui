@@ -120,7 +120,7 @@ function clearActivePopover() {
   allPopoverElements.forEach((popoverElement) => popoverElement.classList.remove("active-popover"))
 }
 
-function setupPopovers() {
+document.addEventListener("nav", () => {
   const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
@@ -130,7 +130,4 @@ function setupPopovers() {
       link.removeEventListener("mouseleave", clearActivePopover)
     })
   }
-}
-
-document.addEventListener("nav", setupPopovers)
-document.addEventListener("render", setupPopovers)
+})

@@ -18,6 +18,5 @@ This plugin has no configuration options.
 ## API
 
 - Category: Emitter
-- Function name: `ExternalPlugin.CNAME()`.
-- Source: [`quartz-community/cname`](https://github.com/quartz-community/cname)
-- Install: `npx quartz plugin add github:quartz-community/cname`
+- Function name: `Plugin.CNAME()`.
+- Source: [`quartz/plugins/emitters/cname.ts`](https://github.com/jackyzha0/quartz/blob/v4/quartz/plugins/emitters/cname.ts).
