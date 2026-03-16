@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - v4
+      - v5
 
 permissions:
   contents: write
@@ -73,7 +74,6 @@ jobs:
             git config pull.rebase >&- || git config pull.rebase true
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git config --global user.name "github-actions[bot]"
-            npm install
             git add package.json
             git add package-lock.json
             git add quartz.lock.json
@@ -81,12 +81,7 @@ jobs:
             git add quartz.config.yaml
             git commit -m "synced dependencies"
             git push
-      - name: Fetch Quartz Theme
-        uses: nick-fields/retry@v3
-        with:
-          command: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/cli/action_develop_branch.sh | bash -s -- ${{ github.event.repository.name }}
-          timeout_minutes: 2
-          max_attempts: 3
+
       - name: Build Quartz Docs
         uses: nick-fields/retry@v3
         with:
